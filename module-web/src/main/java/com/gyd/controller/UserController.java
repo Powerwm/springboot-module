@@ -20,6 +20,7 @@ public class UserController {
     }
     @PostMapping("/checkLogin")
     public String checkLogin(String username, String password){
+        System.out.println("username = [" + username + "], password = [" + password + "]");
         Integer id = userService.checkLogin(username, password);
         if (id != null ){
             return "ok";
